@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,51 +7,30 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
- margin:0;background:#100f17;color:#f8f4ff;
- font-family:Arial,sans-serif;line-height:1.6
-}
-header{
- padding:24px 7%;display:flex;justify-content:space-between;
- align-items:center;gap:12px;flex-wrap:wrap;
- border-bottom:1px solid #30283d
-}
+body{margin:0;background:#100f17;color:#f8f4ff;font-family:Arial,sans-serif;line-height:1.6}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid #30283d}
 .logo{color:#d6b8ff;font-size:20px;font-weight:bold}
-nav a{color:#eee2ff;text-decoration:none;margin:0 7px;font-size:13px}
-.hero{text-align:center;padding:75px 20px 60px}
+nav a{color:#eee2ff;text-decoration:none;margin:0 6px;font-size:13px}
+.hero{text-align:center;padding:65px 20px 50px}
 .tag{color:#c9a5ff;letter-spacing:3px;font-size:12px}
 h1{font-size:clamp(38px,9vw,68px);line-height:1.1;margin:20px 0}
 h1 span{color:#c9a5ff}
 .hero p{color:#c5bdcf;max-width:480px;margin:20px auto}
-.btn{
- display:inline-block;background:#c9a5ff;color:#171020;
- padding:12px 22px;border-radius:25px;text-decoration:none;
- font-weight:bold;margin-top:12px
-}
-section{padding:45px 7%;max-width:1100px;margin:auto}
-h2{font-size:28px;margin-bottom:8px}
+.btn{display:inline-block;background:#c9a5ff;color:#171020;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:12px}
+section{padding:40px 6%;max-width:1100px;margin:auto}
+h2{font-size:27px;margin-bottom:8px}
 .sub{color:#bcb3c9;margin-top:0}
-.gallery{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
- gap:14px;margin-top:25px
-}
-.art{
- min-height:150px;border:1px dashed #69547e;border-radius:14px;
- background:#1d1928;display:flex;flex-direction:column;
- justify-content:center;align-items:center;text-align:center;
- padding:15px;color:#d7c6ee
-}
-.art b{font-size:17px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.art{min-height:145px;border:1px dashed #69547e;border-radius:14px;background:#1d1928;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:15px;color:#d7c6ee}
+.art b{font-size:16px}
 .art small{color:#aaa0b8;margin-top:8px}
-.about{
- background:#1d1928;border-radius:18px;padding:25px;
- color:#d4cbdc
-}
-footer{text-align:center;padding:30px 15px;color:#aaa0b8;
- border-top:1px solid #30283d;font-size:13px}
-@media(min-width:650px){
- .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
+.video-list{display:grid;grid-template-columns:1fr;gap:22px;margin-top:22px}
+.video-card{background:#1d1928;border:1px solid #392c4b;border-radius:14px;padding:12px;overflow:hidden}
+.video-card h3{font-size:15px;margin:0 0 10px;color:#e4d2ff}
+video{display:block;width:100%;border-radius:9px;background:#09080d;max-height:480px}
+.about{background:#1d1928;border-radius:18px;padding:25px;color:#d4cbdc}
+footer{text-align:center;padding:30px 15px;color:#aaa0b8;border-top:1px solid #30283d;font-size:13px}
+@media(min-width:650px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.video-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -60,7 +38,10 @@ footer{text-align:center;padding:30px 15px;color:#aaa0b8;
  <div class="logo">✦ SRAVS ART</div>
  <nav>
   <a href="#home">Home</a>
-  <a href="#gallery">My Art</a>
+  <a href="#character">Character Art</a>
+  <a href="#lineart">Line Art</a>
+  <a href="#manhwa">Manhwa</a>
+  <a href="#videos">Videos</a>
   <a href="#about">About</a>
  </nav>
 </header>
@@ -69,20 +50,84 @@ footer{text-align:center;padding:30px 15px;color:#aaa0b8;
 <section class="hero" id="home">
  <div class="tag">WELCOME TO MY ART WORLD</div>
  <h1>Art from my<br><span>imagination.</span></h1>
- <p>Anime characters, line art, sketches and manhwa-inspired storytelling — a little world created through my art.</p>
- <a class="btn" href="#gallery">Explore My Art ↗</a>
+ <p>Anime characters, line art, manhwa and animated stories — my little creative universe.</p>
+ <a class="btn" href="#character">Explore My Art ↗</a>
 </section>
 
-<section id="gallery">
- <h2>My Art Gallery ✦</h2>
- <p class="sub">A collection of my drawings and creative journey.</p>
+<section id="character">
+ <h2>♡ Character Art</h2>
+ <p class="sub">Original characters and character designs.</p>
  <div class="gallery">
-  <div class="art"><b>♡ Character Art</b><small>Add your drawing here</small></div>
-  <div class="art"><b>✧ Line Art</b><small>Add your drawing here</small></div>
-  <div class="art"><b>☾ Anime Sketches</b><small>Add your drawing here</small></div>
-  <div class="art"><b>✦ Manhwa Panels</b><small>Add your drawing here</small></div>
-  <div class="art"><b>♡ Fantasy Art</b><small>Add your drawing here</small></div>
-  <div class="art"><b>✧ More Artwork</b><small>Your next creation</small></div>
+  <div class="art"><b>Character Art 1</b><small>Artwork coming soon</small></div>
+  <div class="art"><b>Character Art 2</b><small>Artwork coming soon</small></div>
+ </div>
+</section>
+
+<section id="lineart">
+ <h2>✧ Line Art</h2>
+ <p class="sub">Sketches, outlines and drawing practice.</p>
+ <div class="gallery">
+  <div class="art"><b>Line Art 1</b><small>Artwork coming soon</small></div>
+  <div class="art"><b>Line Art 2</b><small>Artwork coming soon</small></div>
+ </div>
+</section>
+
+<section id="manhwa">
+ <h2>☾ Manhwa & Comics</h2>
+ <p class="sub">Panels, expressions and visual storytelling.</p>
+ <div class="gallery">
+  <div class="art"><b>Manhwa Panel 1</b><small>Artwork coming soon</small></div>
+  <div class="art"><b>Fantasy Art</b><small>Artwork coming soon</small></div>
+ </div>
+</section>
+
+<section id="videos">
+ <h2>🎬 Animated Videos</h2>
+ <p class="sub">My animation experiments and creative videos.</p>
+ <div class="video-list">
+
+  <div class="video-card">
+   <h3>Animation 1</h3>
+   <video controls playsinline preload="metadata">
+    <source src="Untitled104.mp4" type="video/mp4">
+   </video>
+  </div>
+
+  <div class="video-card">
+   <h3>Animation 2</h3>
+   <video controls playsinline preload="metadata">
+    <source src="Untitled106.mp4" type="video/mp4">
+   </video>
+  </div>
+
+  <div class="video-card">
+   <h3>Animation 3</h3>
+   <video controls playsinline preload="metadata">
+    <source src="Untitled107.mp4" type="video/mp4">
+   </video>
+  </div>
+
+  <div class="video-card">
+   <h3>Animation 4</h3>
+   <video controls playsinline preload="metadata">
+    <source src="Untitled116.mp4" type="video/mp4">
+   </video>
+  </div>
+
+  <div class="video-card">
+   <h3>Animation 5</h3>
+   <video controls playsinline preload="metadata">
+    <source src="Untitled117%20(1).mp4" type="video/mp4">
+   </video>
+  </div>
+
+  <div class="video-card">
+   <h3>Animation 6</h3>
+   <video controls playsinline preload="metadata">
+    <source src="Untitled93.mp4" type="video/mp4">
+   </video>
+  </div>
+
  </div>
 </section>
 
