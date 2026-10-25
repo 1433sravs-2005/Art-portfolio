@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sravs Art Studio | Manhwa</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;padding:24px 16px;min-height:100vh;
+  font-family:Arial,sans-serif;color:white;text-align:center;
+  background:radial-gradient(ellipse at 0% 20%,#610014 0%,transparent 45%),
+  radial-gradient(ellipse at 100% 80%,#002b70 0%,transparent 48%),#050711;
+}
+h1{color:#fff;text-shadow:0 0 8px #ff1744,0 0 22px #087bff}
+p{color:#dce5ff}
+a{color:#fff;text-decoration:none}
+.back{display:inline-block;margin:10px;padding:10px 18px;border:1px solid #168bff;border-radius:10px;box-shadow:0 0 12px #087bff}
+.comics{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:20px;max-width:850px;margin:28px auto}
+.comic{padding:18px 12px;border:1px solid #ff1744;border-radius:16px;background:#0c1020;box-shadow:0 0 12px #ff1744,0 0 20px #087bff;cursor:pointer}
+.comic h2{font-size:18px}
+.comic:hover{transform:translateY(-4px);box-shadow:0 0 22px #ff1744,0 0 28px #087bff}
+.panels{display:none;max-width:950px;margin:25px auto}
+.panels img{display:block;width:100%;height:auto;margin:18px auto;border:2px solid #168bff;border-radius:8px;box-shadow:0 0 12px #087bff,0 0 10px #ff1744}
+.panels h2{color:#ff6584;text-shadow:0 0 10px #ff1744}
+</style>
+</head>
+<body>
+<a class="back" href="index.html">← Home</a>
+<h1>My Manhwa Comics</h1>
+<p>Choose a comic to read its panels</p>
+
+<div class="comics" id="comicCards">
+  <div class="comic" onclick="showComic('reality')">
+    <h2>Rendered into Reality</h2>
+    <p>Open comic panels →</p>
+  </div>
+  <div class="comic" onclick="showComic('temple')">
+    <h2>Whisper of Forbidden Temple</h2>
+    <p>Open comic panels →</p>
+  </div>
+</div>
+
+<section class="panels" id="reality">
+  <button onclick="goBack()">← All Comics</button>
+  <h2>Rendered into Reality</h2>
+  <img src="Untitled71%20(2).jpg" alt="Rendered into Reality panel 1">
+  <img src="Untitled65%20(2).jpg" alt="Rendered into Reality panel 2">
+  <img src="Untitled66%20(2).jpg" alt="Rendered into Reality panel 3">
+  <img src="Untitled70%20(2).jpg" alt="Rendered into Reality panel 4">
+  <img src="Untitled72%20(2).jpg" alt="Rendered into Reality panel 5">
+  <img src="Untitled74%20(2).jpg" alt="Rendered into Reality panel 6">
+  <img src="Untitled89%20(1).jpg" alt="Rendered into Reality panel 7">
+  <img src="Untitled90%20(1).jpg" alt="Rendered into Reality panel 8">
+</section>
+
+<section class="panels" id="temple">
+  <button onclick="goBack()">← All Comics</button>
+  <h2>Whisper of Forbidden Temple</h2>
+  <img src="Untitled11.jpg" alt="Whisper of Forbidden Temple panel 1">
+  <img src="Untitled20%20(1).jpg" alt="Whisper of Forbidden Temple panel 2">
+  <img src="Untitled41%20(1).jpg" alt="Whisper of Forbidden Temple panel 3">
+  <img src="Untitled46.jpg" alt="Whisper of Forbidden Temple panel 4">
+  <img src="Untitled47%20(1).jpg" alt="Whisper of Forbidden Temple panel 5">
+  <img src="Untitled48%20(1).jpg" alt="Whisper of Forbidden Temple panel 6">
+  <img src="Untitled50%20(1).jpg" alt="Whisper of Forbidden Temple panel 7">
+</section>
+
+<script>
+function showComic(id){
+  document.getElementById('comicCards').style.display='none';
+  document.querySelectorAll('.panels').forEach(p=>p.style.display='none');
+  document.getElementById(id).style.display='block';
+  window.scrollTo(0,0);
+}
+function goBack(){
+  document.querySelectorAll('.panels').forEach(p=>p.style.display='none');
+  document.getElementById('comicCards').style.display='grid';
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
