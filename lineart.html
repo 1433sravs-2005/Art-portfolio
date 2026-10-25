@@ -5,47 +5,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Line Art | Sravs Art Studio</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#080b12;color:#f5f7fb;font-family:Arial,sans-serif;line-height:1.6}
-header{padding:20px 6%;background:#0b101b;border-bottom:1px solid #26364e}
-.logo{font-size:21px;font-weight:bold}
-.logo span{color:#ff3547}
-main{max-width:1100px;margin:auto;padding:30px 6% 55px}
-.back{color:#ff5260;text-decoration:none;font-weight:bold}
-h1{font-size:clamp(32px,7vw,48px);margin:25px 0 5px}
-h1 span{color:#ff3547}
-.sub{color:#aab6c9;margin-top:0}
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
-.art{background:#101b2d;border:1px solid #263e63;border-radius:14px;overflow:hidden}
-.art img{display:block;width:100%;height:220px;object-fit:contain;background:#0b101b}
-.art p{padding:0 12px;font-size:14px}
-footer{text-align:center;color:#8190a7;padding:25px;border-top:1px solid #26364e}
-@media(min-width:700px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#05070c;
+  color:#f5f7fb;
+  font-family:Arial,sans-serif;
+  line-height:1.6;
+}
+header{
+  padding:18px 6%;
+  background:#080c15;
+  border-bottom:1px solid #ff263f;
+  box-shadow:0 3px 18px rgba(255,30,55,.2);
+}
+.logo{font-size:21px;font-weight:bold;letter-spacing:1px}
+.logo span{color:#ff263f;text-shadow:0 0 12px #ff263f}
+main{max-width:1150px;margin:auto;padding:28px 5% 55px}
+.back{
+  color:#ff5265;
+  text-decoration:none;
+  font-weight:bold;
+}
+.back:hover{color:#fff}
+h1{
+  font-size:clamp(36px,7vw,55px);
+  margin:24px 0 4px;
+  line-height:1.2;
+  text-shadow:0 0 18px rgba(255,38,63,.2);
+}
+h1 span{color:#ff263f;text-shadow:0 0 15px rgba(255,38,63,.7)}
+.sub{color:#aab6c9;margin-top:5px}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:30px;
+}
+.art{
+  min-width:0;
+  background:linear-gradient(145deg,#101a2b,#080b12);
+  border:1px solid #ff263f;
+  border-radius:13px;
+  overflow:hidden;
+  box-shadow:0 0 7px rgba(255,38,63,.25);
+  transition:transform .25s,box-shadow .25s;
+}
+.art:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 20px rgba(255,38,63,.65);
+}
+.art a{display:block;text-decoration:none}
+.art img{
+  display:block;
+  width:100%;
+  height:230px;
+  object-fit:contain;
+  background:#05070c;
+  transition:transform .3s;
+}
+.art a:hover img{transform:scale(1.025)}
+.art p{
+  margin:0;
+  padding:11px 12px;
+  color:#ff5265;
+  font-size:14px;
+  border-top:1px solid #44202b;
+  text-align:center;
+}
+footer{
+  text-align:center;
+  color:#8794a9;
+  padding:25px 12px;
+  border-top:1px solid #29344a;
+  font-size:13px;
+}
+@media(min-width:700px){
+  .gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .art img{height:280px}
+}
+@media(max-width:360px){
+  .gallery{gap:10px}
+  .art img{height:180px}
+  .art p{font-size:12px;padding:9px 5px}
+}
 </style>
 </head>
+
 <body>
-<header><div class="logo">✦ SRAVS <span>ART</span></div></header>
+<header>
+  <div class="logo">✦ SRAVS <span>ART</span></div>
+</header>
+
 <main>
-<a class="back" href="index.html">← Back to Home</a>
-<h1>Line <span>Art</span></h1>
-<p class="sub">Sketches, outlines and drawing practice.</p>
-<div class="gallery">
+  <a class="back" href="index.html">← Back to Home</a>
 
-<div class="art"><img src="Untitled121_20261024140842.jpg" alt="Line Art 1"><p>Line Art 1</p></div>
-<div class="art"><img src="Untitled122_20261024140751.jpg" alt="Line Art 2"><p>Line Art 2</p></div>
-<div class="art"><img src="Untitled104_20261024140253.jpg" alt="Line Art 3"><p>Line Art 3</p></div>
-<div class="art"><img src="Untitled120_20261024140133.jpg" alt="Line Art 4"><p>Line Art 4</p></div>
-<div class="art"><img src="Untitled119.jpg" alt="Line Art 5"><p>Line Art 5</p></div>
-<div class="art"><img src="Untitled118_20261024135508.jpg" alt="Line Art 6"><p>Line Art 6</p></div>
-<div class="art"><img src="IMG20260930190619.jpg" alt="Line Art 7"><p>Line Art 7</p></div>
-<div class="art"><img src="Untitled86_20260930120018.jpg" alt="Line Art 8"><p>Line Art 8</p></div>
-<div class="art"><img src="IMG_20261024_104301.jpg" alt="Line Art 9"><p>Line Art 9</p></div>
-<div class="art"><img src="IMG_20261024_103734.jpg" alt="Line Art 10"><p>Line Art 10</p></div>
-<div class="art"><img src="Untitled111_20261007234526.jpg" alt="Line Art 11"><p>Line Art 11</p></div>
+  <h1>Line <span>Art</span></h1>
+  <p class="sub">Sketches, outlines and drawing practice — created by me.</p>
 
-</div>
+  <div class="gallery">
+
+    <div class="art"><a href="Untitled121_20261024140842.jpg" target="_blank" rel="noopener"><img src="Untitled121_20261024140842.jpg" alt="Line Art 1" loading="lazy"><p>Line Art 1 ↗</p></a></div>
+
+    <div class="art"><a href="Untitled122_20261024140751.jpg" target="_blank" rel="noopener"><img src="Untitled122_20261024140751.jpg" alt="Line Art 2" loading="lazy"><p>Line Art 2 ↗</p></a></div>
+
+    <div class="art"><a href="Untitled104_20261024140253.jpg" target="_blank" rel="noopener"><img src="Untitled104_20261024140253.jpg" alt="Line Art 3" loading="lazy"><p>Line Art 3 ↗</p></a></div>
+
+    <div class="art"><a href="Untitled120_20261024140133.jpg" target="_blank" rel="noopener"><img src="Untitled120_20261024140133.jpg" alt="Line Art 4" loading="lazy"><p>Line Art 4 ↗</p></a></div>
+
+    <div class="art"><a href="Untitled119.jpg" target="_blank" rel="noopener"><img src="Untitled119.jpg" alt="Line Art 5" loading="lazy"><p>Line Art 5 ↗</p></a></div>
+
+    <div class="art"><a href="Untitled118_20261024135508.jpg" target="_blank" rel="noopener"><img src="Untitled118_20261024135508.jpg" alt="Line Art 6" loading="lazy"><p>Line Art 6 ↗</p></a></div>
+
+    <div class="art"><a href="IMG20260930190619.jpg" target="_blank" rel="noopener"><img src="IMG20260930190619.jpg" alt="Line Art 7" loading="lazy"><p>Line Art 7 ↗</p></a></div>
+
+    <div class="art"><a href="Untitled86_20260930120018.jpg" target="_blank" rel="noopener"><img src="Untitled86_20260930120018.jpg" alt="Line Art 8" loading="lazy"><p>Line Art 8 ↗</p></a></div>
+
+    <div class="art"><a href="IMG_20261024_104301.jpg" target="_blank" rel="noopener"><img src="IMG_20261024_104301.jpg" alt="Line Art 9" loading="lazy"><p>Line Art 9 ↗</p></a></div>
+
+    <div class="art"><a href="IMG_20261024_103734.jpg" target="_blank" rel="noopener"><img src="IMG_20261024_103734.jpg" alt="Line Art 10" loading="lazy"><p>Line Art 10 ↗</p></a></div>
+
+    <div class="art"><a href="Untitled111_20261007234526.jpg" target="_blank" rel="noopener"><img src="Untitled111_20261007234526.jpg" alt="Line Art 11" loading="lazy"><p>Line Art 11 ↗</p></a></div>
+
+  </div>
 </main>
+
 <footer>Made with ♡ by Sravs · Art is my little universe.</footer>
 </body>
 </html>
+
