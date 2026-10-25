@@ -4,37 +4,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sravs Art Studio</title>
+<meta name="theme-color" content="#05060b">
+<title>Sravs Art Studio | Digital Art Portfolio</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#080b12;color:#f5f5f7;font-family:Arial,sans-serif;line-height:1.6}
-header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:1px solid #24324a}
-.logo{font-size:21px;font-weight:bold;color:#ff3d4d}
-nav{display:flex;gap:12px;flex-wrap:wrap}
-nav a{color:#e5eaf5;text-decoration:none;font-size:13px}
-nav a:hover{color:#ff4657}
-.hero{text-align:center;padding:65px 20px 45px}
-.tag{color:#ff4657;letter-spacing:3px;font-size:12px}
-h1{font-size:clamp(38px,9vw,66px);line-height:1.1;margin:18px 0}
-h1 span{color:#ff4657}
-.hero p{color:#b7c5dc;max-width:470px;margin:20px auto}
-section{padding:25px 6% 55px;max-width:1100px;margin:auto}
-h2{font-size:25px;margin-bottom:5px}
-.sub{color:#aab8ce;margin-top:0}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:25px}
-.card{display:flex;flex-direction:column;justify-content:space-between;min-height:165px;padding:20px 15px;text-decoration:none;color:#f5f5f7;border:1px solid #293b59;border-radius:16px;background:linear-gradient(145deg,#14213a,#10131d);transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-4px);border-color:#ff4657}
-.card .symbol{font-size:30px}
-.card h3{margin:12px 0 4px;font-size:17px}
-.card p{color:#b7c5dc;font-size:13px;margin:0}
-.arrow{color:#ff4657;font-size:20px;align-self:flex-end}
-footer{text-align:center;padding:28px 15px;color:#aab8ce;border-top:1px solid #24324a;font-size:13px}
-@media(min-width:650px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card{min-height:190px;padding:25px}}
+
+:root{
+  --red:#ff173d;
+  --blue:#087bff;
+  --white:#f5f8ff;
+  --muted:#b5c3da;
+  --dark:#05060b;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  color:var(--white);
+  font-family:Arial,sans-serif;
+  line-height:1.6;
+  background:
+    radial-gradient(ellipse at 0% 15%,rgba(255,0,45,.30),transparent 42%),
+    radial-gradient(ellipse at 100% 30%,rgba(0,95,255,.32),transparent 43%),
+    radial-gradient(ellipse at 50% 100%,rgba(0,65,180,.16),transparent 50%),
+    var(--dark);
+  background-attachment:fixed;
+  min-height:100vh;
+}
+
+header{
+  position:relative;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+  background:rgba(5,7,14,.88);
+  border-bottom:1px solid rgba(255,23,61,.8);
+  box-shadow:0 3px 22px rgba(255,23,61,.22),
+             0 5px 28px rgba(0,105,255,.16);
+}
+
+.logo{
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  color:#fff;
+  text-shadow:0 0 10px var(--red),0 0 22px rgba(255,23,61,.7);
+}
+
+.logo span{color:var(--blue)}
+
+nav{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:#e9f0ff;
+  text-decoration:none;
+  font-size:13px;
+  transition:color .2s,text-shadow .2s;
+}
+
+nav a:hover{
+  color:#fff;
+  text-shadow:0 0 9px var(--blue),0 0 14px var(--red);
+}
+
+.hero{
+  text-align:center;
+  padding:78px 20px 60px;
+  position:relative;
+}
+
+.tag{
+  display:inline-block;
+  color:#fff;
+  letter-spacing:3px;
+  font-size:12px;
+  padding:7px 13px;
+  border:1px solid rgba(0,123,255,.8);
+  border-radius:30px;
+  background:rgba(0,90,255,.10);
+  box-shadow:0 0 13px rgba(0,123,255,.38),
+             0 0 12px rgba(255,23,61,.18);
+}
+
+h1{
+  font-size:clamp(40px,9vw,72px);
+  line-height:1.08;
+  margin:25px 0 18px;
+  text-shadow:0 0 25px rgba(0,100,255,.18);
+}
+
+h1 span{
+  color:#fff;
+  text-shadow:0 0 8px var(--red),
+              0 0 20px var(--red),
+              0 0 36px rgba(0,105,255,.7);
+}
+
+.hero p{
+  color:var(--muted);
+  max-width:510px;
+  margin:20px auto;
+  font-size:15px;
+}
+
+.hero-line{
+  width:115px;
+  height:3px;
+  margin:27px auto 0;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--red),#fff,var(--blue));
+  box-shadow:0 0 12px var(--red),0 0 18px var(--blue);
+}
+
+section{
+  padding:25px 6% 65px;
+  max-width:1120px;
+  margin:auto;
+}
+
+h2{
+  font-size:clamp(23px,5vw,30px);
+  margin-bottom:5px;
+  text-shadow:0 0 12px rgba(0,105,255,.28);
+}
+
+.sub{
+  color:var(--muted);
+  margin-top:0;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:28px;
+}
+
+.card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-width:0;
+  min-height:190px;
+  padding:22px 17px;
+  overflow:hidden;
+  text-decoration:none;
+  color:var(--white);
+  border:1px solid rgba(255,23,61,.9);
+  border-radius:16px;
+  background:
+    linear-gradient(135deg,rgba(255,15,50,.13),transparent 45%),
+    linear-gradient(315deg,rgba(0,105,255,.20),transparent 50%),
+    rgba(7,10,19,.94);
+  box-shadow:0 0 10px rgba(255,23,61,.38),
+             0 0 18px rgba(0,105,255,.18),
+             inset 0 0 17px rgba(0,85,255,.08);
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:10%;
+  width:80%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--red),#fff,var(--blue),transparent);
+  box-shadow:0 0 12px var(--red),0 0 17px var(--blue);
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#fff;
+  box-shadow:0 0 13px rgba(255,23,61,.8),
+             0 0 28px rgba(0,105,255,.65),
+             inset 0 0 20px rgba(0,95,255,.14);
+}
+
+.card .symbol{
+  font-size:32px;
+  filter:drop-shadow(0 0 8px rgba(0,120,255,.7));
+}
+
+.card h3{
+  margin:12px 0 4px;
+  font-size:17px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:13px;
+  margin:0;
+}
+
+.arrow{
+  color:#fff;
+  font-size:22px;
+  align-self:flex-end;
+  text-shadow:0 0 9px var(--red),0 0 12px var(--blue);
+}
+
+footer{
+  text-align:center;
+  padding:28px 15px;
+  color:#aab8ce;
+  border-top:1px solid rgba(0,105,255,.55);
+  box-shadow:0 -4px 20px rgba(0,105,255,.10);
+  font-size:13px;
+  background:rgba(5,7,14,.7);
+}
+
+@media(min-width:650px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .card{min-height:210px;padding:26px}
+}
+
+@media(max-width:420px){
+  header{padding:16px 5%}
+  nav{gap:10px}
+  nav a{font-size:12px}
+  .cards{gap:12px}
+  .card{padding:16px 12px;min-height:175px}
+  .card h3{font-size:15px}
+}
 </style>
 </head>
+
 <body>
 <header>
-  <div class="logo">✦ SRAVS ART</div>
+  <div class="logo">✦ SRAVS <span>ART</span></div>
   <nav>
     <a href="index.html">Home</a>
     <a href="character.html">Character Art</a>
@@ -49,6 +257,7 @@ footer{text-align:center;padding:28px 15px;color:#aab8ce;border-top:1px solid #2
     <div class="tag">WELCOME TO MY ART WORLD</div>
     <h1>Art from my<br><span>imagination.</span></h1>
     <p>Anime characters, beautiful line art, manhwa and animated stories — welcome to my creative universe.</p>
+    <div class="hero-line"></div>
   </div>
 
   <section>
@@ -60,7 +269,7 @@ footer{text-align:center;padding:28px 15px;color:#aab8ce;border-top:1px solid #2
         <div>
           <div class="symbol">🎨</div>
           <h3>Character Art</h3>
-          <p>Original characters and designs.</p>
+          <p>Original characters and character designs.</p>
         </div>
         <div class="arrow">↗</div>
       </a>
@@ -78,7 +287,7 @@ footer{text-align:center;padding:28px 15px;color:#aab8ce;border-top:1px solid #2
         <div>
           <div class="symbol">📖</div>
           <h3>Manhwa & Comics</h3>
-          <p>Panels, expressions and storytelling.</p>
+          <p>Panels, expressions and visual storytelling.</p>
         </div>
         <div class="arrow">↗</div>
       </a>
@@ -87,7 +296,7 @@ footer{text-align:center;padding:28px 15px;color:#aab8ce;border-top:1px solid #2
         <div>
           <div class="symbol">🎬</div>
           <h3>Animated Videos</h3>
-          <p>Watch my animation experiments.</p>
+          <p>Watch my animation experiments and creative videos.</p>
         </div>
         <div class="arrow">↗</div>
       </a>
